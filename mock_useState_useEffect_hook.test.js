@@ -1,4 +1,9 @@
+
+// lets say we use below state in component which we want to mock
+
 const [name, setName] = React.useState("");
+==============================================================
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';

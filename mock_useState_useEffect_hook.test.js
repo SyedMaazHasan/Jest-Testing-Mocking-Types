@@ -21,5 +21,5 @@ it('should update state on input change', () => {
   wrapper
     .find('.input')
     .simulate('change', { target: { value: newInputValue } });
-  expect(setState).toHaveBeenCalledWith(newInputValue);
+  expect(setName).toHaveBeenCalledWith(newInputValue);
 });

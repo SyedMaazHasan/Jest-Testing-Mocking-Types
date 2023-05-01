@@ -9,9 +9,10 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 it('should update state on input change', () => {
-  const setName = jest.fn();
 
   const useStateSpy = jest.spyOn(React, 'useState');
+  
+  const setName = jest.fn();
   useStateSpy.mockImplementation((initialState) => [initialState, setName]);
 
   const wrapper = shallow(<App />);

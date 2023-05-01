@@ -1,3 +1,4 @@
+/////MOCKING USESTATE HOOK/////////
 
 // lets say we use below state in component which we want to mock
 
@@ -23,3 +24,19 @@ it('should update state on input change', () => {
     .simulate('change', { target: { value: newInputValue } });
   expect(setName).toHaveBeenCalledWith(newInputValue);
 });
+
+
+///////MOCKING USEEFFECT HOOK/////////////
+
+// lets say you have below useEffect to mock
+
+  React.useEffect(()=> {
+      // someLogic
+  });
+==============================================================
+
+  useEffectMock = jest.spyOn(React, "useEffect");
+  useEffectMock.mockImplementation(f => f());
+
+
+
